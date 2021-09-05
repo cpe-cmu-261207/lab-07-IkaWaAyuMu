@@ -20,7 +20,7 @@ const createEmptyCanvas = () => {
 
 export const PixelPainterStore = new Store<PixelPainterStoreType>({
   canvas: createEmptyCanvas(),
-  currentColor: '#FFFFFF'
+  currentColor: '#000000'
 })
 export function SetCurrentColor(color: string)
 {
