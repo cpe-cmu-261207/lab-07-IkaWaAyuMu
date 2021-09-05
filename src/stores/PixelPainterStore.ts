@@ -39,8 +39,8 @@ export function RandomizeAllCells()
   let colorsPool: string[] = ['#000000', '#804000', '#FE0000', '#FE6A00', '#FFD800', '#00FF01', '#FFFFFF', '#01FFFF', '#0094FE', '#0026FF', '#B100FE', '#FF006E'];
   let output: string[][] = [];
 
-  for (let i=0; i<16; i++ )for (let j=0; j<16; j++)
-      output[i].push(colorsPool[Math.floor(Math.random()*colorsPool.length)]);
+  for (let i=0; i<16; i++ ) {output[i] = []; for (let j=0; j<16; j++)
+      output[i].push(colorsPool[Math.floor(Math.random()*colorsPool.length)]);}
 
   PixelPainterStore.update(p => {p.canvas = output;})
 }
